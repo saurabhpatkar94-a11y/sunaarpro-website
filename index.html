@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 
@@ -29,7 +29,7 @@
       <a href="#tour">Feature tour</a>
       <a href="#psf11">PSF11</a>
       <a href="#features">Features</a>
-      <a href="#pricing">Pricing</a>
+      <a href="pricing.html">Pricing</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
       <a class="btn btn-gold" href="#contact">Book a demo</a>
@@ -181,35 +181,48 @@
 </section>
 
 <!-- PRICING -->
-<section id="pricing" style="background:var(--cream-2)">
+<section id="pricing" class="home-pricing">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Simple pricing</span>
-      <h2>A plan for every counter</h2>
-      <p>Final prices will be announced at launch.</p>
+      <h2>Pick the plan that fits your shop</h2>
+      <p>Every plan starts with a 30-day free trial with all features on. Pay yearly and get 2 months free. Prices are per shop and exclude 18% GST.</p>
     </div>
-    <div class="plans">
-      <div class="plan reveal">
-        <h3>Starter</h3>
-        <div class="price soon-price">Coming soon</div><div class="per">Prices announced at launch</div>
-        <ul><li>1 device</li><li>Billing and GST invoices</li><li>Stock in grams</li><li>Daily reports</li></ul>
-        <a class="btn btn-maroon" href="#contact">Talk to us</a>
-      </div>
-      <div class="plan best reveal">
-        <span class="tag">Most popular</span>
-        <h3>Pro</h3>
-        <div class="price soon-price">Coming soon</div><div class="per">Prices announced at launch</div>
-        <ul><li>Multiple devices with sync</li><li>Everything in Starter</li><li>Udhar khata, loans and pledges</li><li>Barcode labels and thermal printing</li><li>All reports and export</li></ul>
-        <a class="btn btn-gold" href="#contact">Talk to us</a>
-      </div>
-      <div class="plan reveal">
-        <h3>Multi-shop</h3>
-        <div class="price soon-price">Coming soon</div><div class="per">Prices announced at launch</div>
-        <ul><li>Several shops or branches</li><li>Everything in Pro</li><li>Priority support</li><li>Help moving your old data</li></ul>
-        <a class="btn btn-maroon" href="#contact">Talk to us</a>
-      </div>
+    <div class="bill-toggle reveal" data-mode="m" role="group" aria-label="Billing period">
+      <span class="thumb" aria-hidden="true"></span>
+      <button type="button" data-bill="m" aria-pressed="true">Monthly</button>
+      <button type="button" data-bill="y" aria-pressed="false">Yearly <span class="free-badge">2 months free</span></button>
     </div>
-    <p class="note">Plans and prices will be announced at launch.</p>
+    <div class="pmini-grid">
+      <a class="pmini  reveal" href="pricing.html">
+        <h3>Basic</h3><p class="pc-for">Small shop with one billing counter</p>
+        <div class="pc-price"><span class="cur">₹</span><span class="amt" data-m="499" data-y="4,990">499</span><span class="per" data-m="/month" data-y="/year">/month</span></div>
+        <p class="pc-sub"><span data-m="₹588.82 with GST" data-y="About ₹416/month · saves ₹998">₹588.82 with GST</span></p>
+        <span class="pm-dev">1 device</span>
+      </a>
+      <a class="pmini hot reveal" href="pricing.html"><span class="pc-badge">Most shops</span>
+        <h3>Pro</h3><p class="pc-for">Busy shop with 2–3 counters</p>
+        <div class="pc-price"><span class="cur">₹</span><span class="amt" data-m="899" data-y="8,990">899</span><span class="per" data-m="/month" data-y="/year">/month</span></div>
+        <p class="pc-sub"><span data-m="₹1,060.82 with GST" data-y="About ₹749/month · saves ₹1,798">₹1,060.82 with GST</span></p>
+        <span class="pm-dev">Up to 3 devices</span>
+      </a>
+      <a class="pmini  reveal" href="pricing.html">
+        <h3>Business</h3><p class="pc-for">Bigger shop, staff, or more than one outlet</p>
+        <div class="pc-price"><span class="cur">₹</span><span class="amt" data-m="1,499" data-y="14,990">1,499</span><span class="per" data-m="/month" data-y="/year">/month</span></div>
+        <p class="pc-sub"><span data-m="₹1,768.82 with GST" data-y="About ₹1,249/month · saves ₹2,998">₹1,768.82 with GST</span></p>
+        <span class="pm-dev">Up to 6 devices</span>
+      </a>
+      <a class="pmini prem reveal" href="pricing.html"><span class="pc-badge alt">With Sunaar Sathi</span>
+        <h3>Premium</h3><p class="pc-for">Shops that want their customers on an app</p>
+        <div class="pc-price"><span class="cur">₹</span><span class="amt" data-m="2,499" data-y="24,990">2,499</span><span class="per" data-m="/month" data-y="/year">/month</span></div>
+        <p class="pc-sub"><span data-m="₹2,948.82 with GST" data-y="About ₹2,083/month · saves ₹4,998">₹2,948.82 with GST</span></p>
+        <span class="pm-dev">Up to 6 devices</span>
+      </a>
+    </div>
+    <div class="pmini-cta reveal">
+      <a class="btn btn-gold" href="#contact" data-trial>Start 30-day free trial</a>
+      <a class="btn btn-ghost" href="pricing.html">Compare all plans and features</a>
+    </div>
   </div>
 </section>
 
@@ -289,7 +302,7 @@
         <img src="assets/logo-wide.png" alt="Sunaar Pro" style="height:56px;margin-bottom:14px">
         <p>Gold ERP made simple. Billing, stock and GST invoices for jewellery shops.</p>
       </div>
-      <div><h4>Product</h4><ul><li><a href="#features">Features</a></li><li><a href="#app">See the app</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#download">Download</a></li></ul></div>
+      <div><h4>Product</h4><ul><li><a href="#features">Features</a></li><li><a href="#app">See the app</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="#download">Download</a></li></ul></div>
       <div><h4>Company</h4><ul><li><a href="#contact">Contact</a></li><li><a href="#faq">FAQ</a></li><li><a href="privacy.html">Privacy policy</a></li></ul></div>
       <div><h4>Reach us</h4><ul><li>Contact details coming soon</li><li>India</li></ul></div>
     </div>
@@ -297,6 +310,7 @@
   </div>
 </footer>
 
+<script src="pricing.js?v=1"></script>
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
 document.getElementById('demoForm').addEventListener('submit', e => e.preventDefault());
@@ -414,7 +428,7 @@ document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',
   var bar=document.getElementById('progress'), nav=document.getElementById('nav'), t=false;
   function f(){t=false;var h=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?scrollY/h:0)+')';nav.classList.toggle('scrolled',scrollY>20);}
   addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(f);}},{passive:true}); f();
-  document.querySelectorAll('.features,.steps,.plans,.psf-points,.faq,.shot-grid').forEach(function(g){
+  document.querySelectorAll('.features,.steps,.pmini-grid,.psf-points,.faq,.shot-grid').forEach(function(g){
     g.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(i%4*0.1)+'s';});
   });
   document.querySelectorAll('.card,.step,.plan,.psf-point,.shot').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');});});
