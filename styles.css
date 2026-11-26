@@ -281,3 +281,18 @@ footer a:hover{color:var(--gold-2)}
 .plan:not(.best) .price.soon-price{color:var(--maroon)}
 .plan.best .price.soon-price{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 button[disabled]{opacity:.75;cursor:not-allowed}
+
+/* screen strip under hero */
+.shots{padding:28px 0 8px;background:linear-gradient(180deg,var(--maroon-3,#3A010A),#58020F);overflow:hidden}
+.mq{overflow:hidden;margin:10px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq-track{display:flex;gap:16px;width:max-content;animation:mq 60s linear infinite}
+.mq-rev .mq-track{animation-direction:reverse;animation-duration:70s}
+.mq img{height:200px;width:auto;border-radius:12px;border:2px solid rgba(212,175,55,.55);box-shadow:0 8px 24px rgba(0,0,0,.35);flex:none}
+.mq:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (max-width:640px){.mq img{height:130px}.mq-track{gap:10px}}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none}}
+/* v3: screens first */
+.hero .wrap.hero-center{padding-top:34px}
+.hero-emblem{width:96px}
+.hero-center .stage{margin-top:26px}
