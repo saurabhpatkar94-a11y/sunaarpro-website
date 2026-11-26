@@ -186,30 +186,71 @@
     <div class="sec-head reveal">
       <span class="eyebrow">Simple pricing</span>
       <h2>A plan for every counter</h2>
-      <p>Final prices will be announced at launch.</p>
+      <p>Start free, or try Basic free for 3 days. Pay monthly, yearly (2 months free), or for 3 years at once and save 25% with the price locked.</p>
     </div>
-    <div class="plans">
+    <div class="bill-switch reveal" role="group" aria-label="Billing period">
+      <button type="button" data-period="m" aria-pressed="true">Monthly</button>
+      <button type="button" data-period="y" aria-pressed="false">Yearly <span>2 months free</span></button>
+      <button type="button" data-period="t" aria-pressed="false">3 Years <span>Save 25%</span></button>
+    </div>
+    <div class="plans five">
       <div class="plan reveal">
-        <h3>Starter</h3>
-        <div class="price soon-price">Coming soon</div><div class="per">Prices announced at launch</div>
-        <ul><li>1 device</li><li>Billing and GST invoices</li><li>Stock in grams</li><li>Daily reports</li></ul>
-        <a class="btn btn-maroon" href="#contact">Talk to us</a>
+        <span class="tag tag-plain">Forever</span>
+        <h3>Free</h3>
+        <p class="for">New or very small shop getting started</p>
+        <div class="price" data-m="0" data-y="0" data-t="0"></div><div class="per" data-m="0" data-y="0" data-t="0"></div>
+        <ul><li>1 device</li><li>Up to 10 bills a month, 50 stock items</li><li>New Sale, Quick Gold/Silver bills, Tax Invoice</li><li>Unlimited estimates, GST invoices with HUID</li><li>Customers, gold rates, daily report</li><li>Thermal &amp; A4 printing, barcode scanner</li><li>Data saved on your device</li></ul>
+        <a class="btn btn-maroon" href="#contact">Start free</a>
+      </div>
+      <div class="plan reveal">
+        <span class="tag tag-plain">3-day free trial</span>
+        <h3>Basic</h3>
+        <p class="for">Small shop with one billing counter</p>
+        <div class="price" data-m="499" data-y="4990" data-t="13490"></div><div class="per" data-m="499" data-y="4990" data-t="13490"></div>
+        <ul><li>1 device, unlimited bills &amp; stock</li><li>Everything in Free</li><li>Udhar khata, cash book, quotations</li><li>GST return (GSTR-1 / 3B), BIS register</li><li>Old Gold / Silver Bill, URD exchange</li><li>Monthly, yearly &amp; custom reports</li></ul>
+        <a class="btn btn-maroon" href="#contact">Start 3-day free trial</a>
       </div>
       <div class="plan best reveal">
-        <span class="tag">Most popular</span>
+        <span class="tag">Most shops</span>
         <h3>Pro</h3>
-        <div class="price soon-price">Coming soon</div><div class="per">Prices announced at launch</div>
-        <ul><li>Multiple devices with sync</li><li>Everything in Starter</li><li>Udhar khata, loans and pledges</li><li>Barcode labels and thermal printing</li><li>All reports and export</li></ul>
-        <a class="btn btn-gold" href="#contact">Talk to us</a>
+        <p class="for">Busy shop with 2–3 counters</p>
+        <div class="price" data-m="899" data-y="8990" data-t="23990"></div><div class="per" data-m="899" data-y="8990" data-t="23990"></div>
+        <ul><li>Up to 3 devices</li><li>Everything in Basic</li><li>Girvi Khata</li><li>Sale Returns, exchange &amp; credit notes</li><li>Cloud sync &amp; backup</li><li>Bills &amp; reports on WhatsApp</li><li>Barcode labels, data import</li><li>Advance booking, job work, schemes, karigar</li></ul>
+        <a class="btn btn-gold" href="#contact">Get started</a>
       </div>
       <div class="plan reveal">
-        <h3>Multi-shop</h3>
-        <div class="price soon-price">Coming soon</div><div class="per">Prices announced at launch</div>
-        <ul><li>Several shops or branches</li><li>Everything in Pro</li><li>Priority support</li><li>Help moving your old data</li></ul>
-        <a class="btn btn-maroon" href="#contact">Talk to us</a>
+        <h3>Business</h3>
+        <p class="for">Bigger shop, staff, or more than one outlet</p>
+        <div class="price" data-m="1499" data-y="14990" data-t="39990"></div><div class="per" data-m="1499" data-y="14990" data-t="39990"></div>
+        <ul><li>Up to 6 devices</li><li>Everything in Pro</li><li>Several shops in one account</li><li>Staff &amp; payroll</li><li>P&amp;L, ledger, vouchers, Tally export</li><li>Priority support &amp; setup help</li><li class="soon">Coming soon: staff logins, auto WhatsApp reminders, loyalty points, RFID</li></ul>
+        <a class="btn btn-maroon" href="#contact">Get started</a>
+      </div>
+      <div class="plan reveal">
+        <span class="tag tag-plain">With Sunaar Sathi</span>
+        <h3>Premium</h3>
+        <p class="for">Shops that want their customers on an app</p>
+        <div class="price" data-m="2499" data-y="24990" data-t="66990"></div><div class="per" data-m="2499" data-y="24990" data-t="66990"></div>
+        <ul><li>Up to 6 devices</li><li>Everything in Business</li><li class="soon">Coming soon: Sunaar Sathi customer app — catalogue, today's rate, bills, girvi &amp; scheme status, offers and alerts</li></ul>
+        <a class="btn btn-maroon" href="#contact">Join the waitlist</a>
       </div>
     </div>
-    <p class="note">Plans and prices will be announced at launch.</p>
+
+    <details class="compare reveal">
+      <summary>Compare every feature</summary>
+      <div class="compare-box">
+        <table>
+          <thead><tr><th scope="col">Feature</th><th scope="col">Free</th><th scope="col">Basic</th><th scope="col" class="pick">Pro</th><th scope="col">Business</th><th scope="col">Premium</th></tr></thead>
+          <tbody id="compareRows"></tbody>
+        </table>
+      </div>
+    </details>
+
+    <div class="plan-notes reveal">
+      <div><b>Girvi only</b> — <span class="girvi-price" data-m="299" data-y="2990" data-t="7990"></span> for money-lending shops that only need Girvi Khata. 1 device.</div>
+      <div><b>Missed a renewal?</b> 7 days of grace, then your shop moves to the Free plan. Your data is never deleted.</div>
+      <div><b>Every plan:</b> free setup, free updates, help guides on every screen.</div>
+    </div>
+    <p class="note">Prices in Indian rupees, per shop, excluding 18% GST. 3-year plans are paid upfront with the price locked. "Coming soon" features are added to the listed plans at no extra cost.</p>
   </div>
 </section>
 
@@ -228,6 +269,12 @@
       <details><summary>Is my data safe?</summary><p>Your shop data is stored securely and only your shop's devices can see it. Read our <a href="privacy.html">privacy policy</a> for details.</p></details>
       <details><summary>Does it work on the PosiFlow PSF11?</summary><p>Yes. Sunaar Pro runs on the PSF11 all-in-one billing machine and prints receipts on its built-in 80mm thermal printer. Choose "Built-in" in the app&#39;s printer settings.</p></details>
       <details><summary>Does it track HUID and hallmarking?</summary><p>Yes. You can save the HUID with each piece and it appears on your stock list and invoices.</p></details>
+      <details><summary>Is there a free plan?</summary><p>Yes. The Free plan costs nothing, forever: 1 device, up to 10 bills a month and 50 stock items, with billing, estimates, GST invoices and printing. Upgrade any time and all your bills and stock come with you.</p></details>
+      <details><summary>Is there a free trial?</summary><p>Yes. Try the Basic plan free for 3 days, with no card needed. After that, pick a paid plan or stay on Free.</p></details>
+      <details><summary>Can I pay monthly?</summary><p>Yes. Pay monthly, yearly (2 months free), or for 3 years at once (25% off, price locked). You can move to a longer period any time and your unused days carry over.</p></details>
+      <details><summary>What happens if I stop paying?</summary><p>Nothing is deleted. After 7 days of grace your shop moves to the Free plan: you can still open, search and reprint every old bill. Renew and everything opens again.</p></details>
+      <details><summary>Can you move my data from my old software?</summary><p>Yes, free. Export your stock, customers, girvi and old bills to Excel from your old software, and Sunaar Pro imports them.</p></details>
+      <details><summary>Is a refund possible?</summary><p>Use the Free plan or the 3-day Basic trial first. Paid plans are not refunded once started, but you can upgrade any time by paying the difference.</p></details>
     </div>
   </div>
 </section>
@@ -418,6 +465,96 @@ document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',
     g.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(i%4*0.1)+'s';});
   });
   document.querySelectorAll('.card,.step,.plan,.psf-point,.shot').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');});});
+})();
+
+/* Pricing: Monthly / Yearly / 3 Years switch + feature comparison */
+(function(){
+  // Columns: Free, Basic, Pro, Business, Premium. y = included, n = not, s = coming soon, array = text
+  var FEATURES = [
+    ['Limits', null],
+    ['Number of devices', ['1','1','3','6','6']],
+    ['Bills per month', ['10','Unlimited','Unlimited','Unlimited','Unlimited']],
+    ['Stock items', ['50','Unlimited','Unlimited','Unlimited','Unlimited']],
+    ['Free trial', ['—','3 days','—','—','—']],
+    ['Billing', null],
+    ['New Sale, Quick Gold / Silver Bill, Tax Invoice Bill', 'yyyyy'],
+    ['Estimates', 'yyyyy'],
+    ['Quotations, fixed amount bill', 'nyyyy'],
+    ['Record payment or mark payment pending', 'yyyyy'],
+    ['Advance booking, order billing, job work', 'nnyyy'],
+    ['Installment / gold saving schemes', 'nnyyy'],
+    ['Sale Returns, exchange & credit notes', 'nnyyy'],
+    ['Stock & customers', null],
+    ['Add Products, stock, catalogue', 'yyyyy'],
+    ['Diamonds & gems', 'nyyyy'],
+    ['Barcode scanner support', 'yyyyy'],
+    ['Barcode label design & printing', 'nnyyy'],
+    ['Customers', 'yyyyy'],
+    ['Udhar khata, cash book', 'nyyyy'],
+    ['Girvi & old metal', null],
+    ['Old Gold / Silver Bill (purchase receipts)', 'nyyyy'],
+    ['URD / metal exchange', 'nyyyy'],
+    ['Girvi Khata', 'nnyyy'],
+    ['GST & reports', null],
+    ['GST invoices with HUID', 'yyyyy'],
+    ['BIS stock register, HUID transfers', 'nyyyy'],
+    ['GST return (GSTR-1 / 3B)', 'nyyyy'],
+    ['Daily report', 'yyyyy'],
+    ['Monthly, yearly & custom reports', 'nyyyy'],
+    ['Profit & loss, party ledger, vouchers, Tally export', 'nnnyy'],
+    ['Workshop & staff', null],
+    ['Karigar account, repair orders', 'nnyyy'],
+    ['Staff & payroll', 'nnnyy'],
+    ['Staff logins with permissions', 'nnnss'],
+    ['Sharing, cloud & devices', null],
+    ['Thermal & A4 printing', 'yyyyy'],
+    ['Local backup file on the device', 'yyyyy'],
+    ['Cloud sync & backup', 'nnyyy'],
+    ['Send bills & reports on WhatsApp', 'nnyyy'],
+    ['Automatic WhatsApp reminders (girvi, schemes, birthdays)', 'nnnss'],
+    ['Import data from old software', 'nnyyy'],
+    ['Several shops in one account', 'nnnyy'],
+    ['RFID stock scanning', 'nnnss'],
+    ['Customers & growth', null],
+    ['Loyalty points', 'nnnss'],
+    ['Sunaar Sathi customer app', 'nnnns'],
+    ['Support', null],
+    ['Help guides, free updates', 'yyyyy'],
+    ['No "Made with Sunaar Pro" line on bills', 'nyyyy'],
+    ['Priority support & setup help', 'nnnyy']
+  ];
+  var body = document.getElementById('compareRows');
+  if (body) FEATURES.forEach(function(f){
+    var tr = document.createElement('tr');
+    if (f[1] === null) { tr.className = 'group'; tr.innerHTML = '<td colspan="6">' + f[0] + '</td>'; body.appendChild(tr); return; }
+    var cells = Array.isArray(f[1])
+      ? f[1].map(function(x){ return '<td class="v">' + x + '</td>'; })
+      : f[1].split('').map(function(c){ return c === 'y' ? '<td class="y" aria-label="Included">✓</td>' : c === 's' ? '<td class="s"><span>Coming soon</span></td>' : '<td class="n" aria-label="Not included">—</td>'; });
+    cells[2] = cells[2].replace('<td class="', '<td class="pick ');
+    tr.innerHTML = '<td>' + f[0] + '</td>' + cells.join('');
+    body.appendChild(tr);
+  });
+
+  var inr = function(n){ return '₹' + Math.round(n).toLocaleString('en-IN'); };
+  var inr2 = function(n){ return '₹' + n.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); };
+  var UNIT = { m: 'month', y: 'year', t: '3 years' };
+  function render(p){
+    document.querySelectorAll('.bill-switch button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.period === p); });
+    document.querySelectorAll('#pricing .price[data-m]').forEach(function(el){
+      var v = +el.dataset[p];
+      el.innerHTML = v === 0 ? '₹0 <small>forever</small>' : inr(v) + ' <small>/ ' + UNIT[p] + '</small>';
+    });
+    document.querySelectorAll('#pricing .per[data-m]').forEach(function(el){
+      var m = +el.dataset.m, y = +el.dataset.y, t = +el.dataset.t;
+      if (m === 0) { el.textContent = 'No payment, no card. Upgrade any time.'; return; }
+      el.textContent = p === 'm' ? inr2(m * 1.18) + ' with GST · ' + inr(m * 12) + ' a year'
+        : p === 'y' ? 'About ' + inr(y / 12) + '/month · saves ' + inr(m * 12 - y)
+        : 'About ' + inr(t / 36) + '/month · saves ' + inr(m * 36 - t) + ' · price locked';
+    });
+    document.querySelectorAll('.girvi-price').forEach(function(el){ el.textContent = inr(+el.dataset[p]) + ' / ' + UNIT[p]; });
+  }
+  document.querySelectorAll('.bill-switch button').forEach(function(b){ b.addEventListener('click', function(){ render(b.dataset.period); }); });
+  render('m');
 })();
 </script>
 </body>
