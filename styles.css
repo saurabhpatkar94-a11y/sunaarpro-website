@@ -575,3 +575,32 @@ footer{background:#3A010A;border-top:0}
   background:radial-gradient(circle at 50% 35%,#8E0A24 0%,#6B0115 55%,#3A010A 100%);
   box-shadow:0 18px 40px -16px rgba(107,1,21,.55),0 0 0 1px rgba(212,175,55,.45);filter:none}
 @media (max-width:760px){.hero-emblem{width:104px;padding:16px;border-radius:24px}}
+
+/* ── Phones: pricing that doesn't go on forever ───────────────────────── */
+.plan-dots,.swipe-hint,.girvi-plan .gp-more{display:none}
+@media (max-width:760px){
+  #pricing .plans.five{display:flex;grid-template-columns:none;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+    margin:0 -16px;padding:14px 16px 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch;align-items:stretch}
+  #pricing .plans.five::-webkit-scrollbar{display:none}
+  #pricing .plans.five .plan{flex:0 0 84%;scroll-snap-align:center;padding:22px 18px;opacity:1;transform:none}
+  #pricing .plans.five .plan .per{min-height:0}
+  #pricing .plans.five .plan ul{margin:14px 0 18px;font-size:.86rem}
+  .plan-dots{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-top:10px}
+  .plan-dots button{border:1px solid var(--line);background:#fff;color:var(--muted);font:600 .74rem 'Poppins',system-ui,sans-serif;
+    padding:6px 11px;border-radius:999px;cursor:pointer}
+  .plan-dots button.on{background:#6B0115;border-color:#6B0115;color:#fff}
+  .swipe-hint{display:block;text-align:center;font-size:.78rem;color:var(--muted);margin:8px 0 0}
+  .girvi-plan .gp-list{padding:18px 20px;gap:8px}
+  .girvi-plan:not(.open) .gp-list li:nth-child(n+4):not(.gp-more):not(.gp-note){display:none}
+  .girvi-plan:not(.open) .gp-list li.gp-more{display:block}
+  .girvi-plan .gp-list li.gp-more::before{content:""}
+  .girvi-plan .gp-more button{background:none;border:0;padding:4px 0;color:#6B0115;font:600 .88rem 'Poppins',system-ui,sans-serif;cursor:pointer}
+  .girvi-plan .gp-left{padding:22px 20px}
+  .plan-notes{gap:10px}
+}
+@media (max-width:760px){
+  .bill-switch{display:flex;flex-wrap:nowrap;width:100%;max-width:420px;margin-left:auto;margin-right:auto;padding:4px;gap:2px}
+  .bill-switch button{flex:1;padding:9px 4px;font-size:.82rem;line-height:1.15;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+  .bill-switch button span{font-size:.6rem;padding:1px 6px;margin:0}
+  #pricing .sec-head p{font-size:.92rem}
+}

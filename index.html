@@ -233,6 +233,8 @@
         <a class="btn btn-maroon" href="#contact">Join the waitlist</a>
       </div>
     </div>
+    <div class="plan-dots" aria-hidden="true"></div>
+    <p class="swipe-hint">Swipe to see all 5 plans →</p>
 
     <div class="girvi-plan reveal">
       <div class="gp-left">
@@ -251,6 +253,7 @@
         <li>Overdue, At-risk and Due-soon lists, girvi reports</li>
         <li>Loans &amp; payments by cash, UPI or bank (NEFT / RTGS)</li>
         <li>Customers, Cash Book, interest calculator, cloud backup</li>
+        <li class="gp-more"><button type="button">See everything included ▾</button></li>
         <li class="gp-note">No billing, stock or GST invoices — Pro includes Girvi Khata plus everything else.</li>
       </ul>
     </div>
@@ -573,6 +576,35 @@ document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',
   }
   document.querySelectorAll('.bill-switch button').forEach(function(b){ b.addEventListener('click', function(){ render(b.dataset.period); }); });
   render('m');
+})();
+</script>
+<script>
+// Phones: plan cards swipe sideways (opens on Pro), dots show where you are
+(function(){
+  var row=document.querySelector('#pricing .plans'), dots=document.querySelector('#pricing .plan-dots');
+  if(!row||!dots) return;
+  var cards=[].slice.call(row.querySelectorAll('.plan'));
+  cards.forEach(function(c,i){
+    var d=document.createElement('button'); d.type='button'; d.setAttribute('aria-label',c.querySelector('h3').textContent);
+    d.textContent=c.querySelector('h3').textContent;
+    d.onclick=function(){ row.scrollTo({left:c.offsetLeft-(row.clientWidth-c.clientWidth)/2,behavior:'smooth'}); };
+    dots.appendChild(d);
+  });
+  function mark(){
+    var mid=row.scrollLeft+row.clientWidth/2, best=0, bd=1e9;
+    cards.forEach(function(c,i){ var d=Math.abs(c.offsetLeft+c.clientWidth/2-mid); if(d<bd){bd=d;best=i;} });
+    [].forEach.call(dots.children,function(d,i){ d.classList.toggle('on',i===best); });
+  }
+  row.addEventListener('scroll',function(){ requestAnimationFrame(mark); },{passive:true});
+  function start(){
+    if(row.scrollWidth<=row.clientWidth+4){ mark(); return; }
+    var pro=row.querySelector('.plan.best');
+    if(pro) row.scrollLeft=pro.offsetLeft-(row.clientWidth-pro.clientWidth)/2;
+    mark();
+  }
+  window.addEventListener('load',start); start();
+  var more=document.querySelector('.girvi-plan .gp-more button');
+  if(more) more.onclick=function(){ document.querySelector('.girvi-plan').classList.add('open'); };
 })();
 </script>
 </body>
