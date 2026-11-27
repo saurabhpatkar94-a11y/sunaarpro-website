@@ -552,3 +552,20 @@ footer{background:#3A010A;border-top:0}
 .legal-hero h1{color:var(--maroon)}
 .legal-hero p,.legal-hero .updated,.legal-hero small{color:var(--muted)}
 .legal-hero .eyebrow{color:var(--maroon)}
+
+/* Girvi-only plan card (wide, burgundy left panel) */
+.girvi-plan{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);margin-top:26px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#fff;box-shadow:0 18px 40px -28px rgba(58,1,10,.35)}
+.girvi-plan .gp-left{padding:28px 26px;background:linear-gradient(160deg,#6B0115,#3A010A);color:#fff;display:flex;flex-direction:column;gap:6px}
+.girvi-plan .gp-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#F2D27A}
+.girvi-plan h3{font-family:'Poppins';font-weight:600;font-size:1.4rem}
+.girvi-plan .gp-for{font-size:.88rem;color:#F1DFC0}
+.girvi-plan .price{font-family:'Cinzel',serif;font-size:2.2rem;font-weight:700;margin-top:8px;font-variant-numeric:tabular-nums}
+.girvi-plan .price small{font:500 .82rem 'Poppins',system-ui,sans-serif;color:#E9D3AE}
+.girvi-plan .per{font-size:.82rem;color:#E9D3AE;font-variant-numeric:tabular-nums}
+.girvi-plan .btn{margin-top:14px;justify-content:center}
+.girvi-plan .gp-list{list-style:none;padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;font-size:.92rem;align-content:start}
+.girvi-plan .gp-list li::before{content:"✦ ";color:var(--gold-3)}
+.girvi-plan .gp-list li.gp-note{grid-column:1/-1;color:var(--muted);font-size:.85rem}
+.girvi-plan .gp-list li.gp-note::before{content:""}
+.plan-notes{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:760px){.girvi-plan{grid-template-columns:1fr}.girvi-plan .gp-list{grid-template-columns:1fr}.plan-notes{grid-template-columns:1fr}}
