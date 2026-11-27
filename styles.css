@@ -569,3 +569,9 @@ footer{background:#3A010A;border-top:0}
 .girvi-plan .gp-list li.gp-note::before{content:""}
 .plan-notes{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media (max-width:760px){.girvi-plan{grid-template-columns:1fr}.girvi-plan .gp-list{grid-template-columns:1fr}.plan-notes{grid-template-columns:1fr}}
+
+/* Big SJ logo sits on a maroon tile */
+.hero-emblem{width:128px;height:auto;padding:20px;box-sizing:border-box;border-radius:30px;
+  background:radial-gradient(circle at 50% 35%,#8E0A24 0%,#6B0115 55%,#3A010A 100%);
+  box-shadow:0 18px 40px -16px rgba(107,1,21,.55),0 0 0 1px rgba(212,175,55,.45);filter:none}
+@media (max-width:760px){.hero-emblem{width:104px;padding:16px;border-radius:24px}}
