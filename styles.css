@@ -604,3 +604,83 @@ footer{background:#3A010A;border-top:0}
   .bill-switch button span{font-size:.6rem;padding:1px 6px;margin:0}
   #pricing .sec-head p{font-size:.92rem}
 }
+
+/* ── Phones: shorter page — swipe rows for features & screenshots, tighter spacing ── */
+.swipe-dots{display:none}
+@media (max-width:760px){
+  section{padding:48px 0}
+  .sec-head{margin-bottom:22px}
+  .sec-head h2{margin:8px 0 8px}
+  .sec-head p{font-size:.92rem}
+
+  /* Features + app screenshots: one row you swipe sideways */
+  .features,.shot-grid{display:flex!important;grid-template-columns:none!important;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+    margin:0 -16px;padding:6px 16px 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .features::-webkit-scrollbar,.shot-grid::-webkit-scrollbar{display:none}
+  .features .card{flex:0 0 78%;scroll-snap-align:center;padding:20px 18px;opacity:1;transform:none}
+  .shot-grid .shot{flex:0 0 82%;scroll-snap-align:center;opacity:1;transform:none}
+  .swipe-dots{display:flex;justify-content:center;gap:6px;margin-top:10px}
+  .swipe-dots i{width:7px;height:7px;border-radius:50%;background:rgba(107,1,21,.2);transition:all .2s}
+  .swipe-dots i.on{width:20px;border-radius:4px;background:#6B0115}
+  .bigscreen .swipe-dots i{background:rgba(242,210,122,.3)}.bigscreen .swipe-dots i.on{background:#F2D27A}
+
+  /* PSF11: smaller photo, points two per row */
+  .psf-grid{gap:18px}
+  .psf-photo img{max-height:300px;width:auto;margin:0 auto}
+  .psf-points{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .psf-point{flex-direction:column;gap:8px;padding:14px}
+  .psf-point h3{font-size:.92rem}.psf-point p{font-size:.78rem;line-height:1.45}
+  .chips{margin-top:16px}
+
+  /* Feature tour: list becomes a swipe row of buttons under the screen */
+  .tour-wrap{display:flex;flex-direction:column-reverse;gap:14px}
+  .tour-list{display:flex!important;overflow-x:auto;gap:8px;margin:0 -16px;padding:2px 16px 6px;scrollbar-width:none}
+  .tour-list::-webkit-scrollbar{display:none}
+  .tour-list li{flex:0 0 auto}
+  .tour-list button{padding:9px 13px;white-space:nowrap}
+  .tour-list li.active small{display:none}
+  .tabs{margin-bottom:16px;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;margin-left:-16px;margin-right:-16px;padding:0 16px;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs>*{flex:0 0 auto}
+
+  /* Showcase, steps, FAQ, contact, footer: tighter */
+  .show-grid{gap:20px}.show-phone{width:210px!important}
+  .steps{gap:10px}.step{padding:20px 18px 18px}
+  .faq{gap:8px}
+  .contact-grid{gap:18px}
+  footer{padding:36px 0 20px}.foot{grid-template-columns:1fr 1fr;gap:18px}.foot>div:first-child{grid-column:1/-1}
+  .foot-bottom{margin-top:20px}
+}
+@media (max-width:760px){
+  /* keep everything inside the phone width */
+  .tour-wrap>*,.tour-view,.tour-frame,.psf-grid>*,.show-grid>*,.contact-grid>*{min-width:0;max-width:100%}
+  .tour-frame .dots b{overflow:hidden;text-overflow:ellipsis;min-width:0}
+  /* hero: no empty band under the tablet picture */
+  .hero-center .stage{height:250px;margin-top:24px}
+  .hero .wrap.hero-center{padding-top:36px;padding-bottom:24px}
+  .hero-center .cta{margin-top:18px}.hero-center .stores{margin-top:18px}
+  /* showcase: picture + title, no tick list */
+  .show-text .ticks{display:none}
+  /* FAQ: first 6, rest behind a button */
+  .faq:not(.open) details:nth-of-type(n+7){display:none}
+  .faq-more{display:block;margin:12px auto 0;background:none;border:1px solid var(--line);border-radius:999px;padding:9px 18px;
+    font:600 .85rem 'Poppins',system-ui,sans-serif;color:#6B0115;cursor:pointer}
+  .faq.open+.faq-more{display:none}
+  /* download box: no big logo */
+  .dl-icon{display:none}
+  /* contact: 4 small tiles two per row */
+  .contact-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .contact-item{padding:10px 12px;gap:10px}
+  .contact-item .ico{width:34px;height:34px;flex:0 0 34px}
+  .contact-item b{font-size:.82rem}.contact-item small{font-size:.68rem}
+}
+.faq-more{display:none}
+@media (max-width:760px){
+  #pricing .bill-switch{margin-top:6px;margin-bottom:6px}
+  #pricing .sec-head p{display:none}
+  .chips{display:none}
+  .step{padding:14px 16px 14px 64px;min-height:0}
+  .step::before{position:absolute;left:16px;top:12px;font-size:1.7rem;line-height:1}
+  .step h3{font-size:.98rem;margin-bottom:2px}.step p{font-size:.84rem}
+}
+@media (max-width:760px){ #pricing .plans.five{align-items:flex-start} }

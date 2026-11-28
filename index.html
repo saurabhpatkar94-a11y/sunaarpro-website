@@ -298,6 +298,7 @@
       <details><summary>Can you move my data from my old software?</summary><p>Yes, free. Export your stock, customers, girvi and old bills to Excel from your old software, and Sunaar Pro imports them.</p></details>
       <details><summary>Is a refund possible?</summary><p>Try Sunaar Pro on the Free plan first. Paid plans are not refunded once started, but you can upgrade any time by paying the difference.</p></details>
     </div>
+    <button type="button" class="faq-more" onclick="this.previousElementSibling.classList.add('open')">More questions ▾</button>
   </div>
 </section>
 
@@ -605,6 +606,21 @@ document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',
   window.addEventListener('load',start); start();
   var more=document.querySelector('.girvi-plan .gp-more button');
   if(more) more.onclick=function(){ document.querySelector('.girvi-plan').classList.add('open'); };
+})();
+</script>
+<script>
+// Phones: dots under the swipe rows (features, app screens)
+(function(){
+  ['.features','.shot-grid'].forEach(function(sel){
+    var row=document.querySelector(sel); if(!row) return;
+    var items=[].slice.call(row.children), dots=document.createElement('div'); dots.className='swipe-dots';
+    items.forEach(function(){ dots.appendChild(document.createElement('i')); });
+    row.parentNode.insertBefore(dots,row.nextSibling);
+    function mark(){ var mid=row.scrollLeft+row.clientWidth/2,b=0,bd=1e9;
+      items.forEach(function(c,i){ var d=Math.abs(c.offsetLeft+c.clientWidth/2-mid); if(d<bd){bd=d;b=i;} });
+      [].forEach.call(dots.children,function(d,i){ d.classList.toggle('on',i===b); }); }
+    row.addEventListener('scroll',function(){ requestAnimationFrame(mark); },{passive:true}); mark();
+  });
 })();
 </script>
 </body>
