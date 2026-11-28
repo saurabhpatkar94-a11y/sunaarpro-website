@@ -686,7 +686,7 @@ footer{background:#3A010A;border-top:0}
 @media (max-width:760px){ #pricing .plans.five{align-items:flex-start} }
 
 /* ── Devices ("Use it on every device") ─────────────────────────────────── */
-.devices{padding-top:0}
+.devices{padding-top:72px}
 .dev-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;align-items:stretch}
 .dev{margin:0;background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px 16px;display:flex;flex-direction:column;gap:14px;
   box-shadow:0 18px 40px -30px rgba(58,1,10,.35)}
@@ -715,3 +715,4 @@ footer{background:#3A010A;border-top:0}
   .dev{flex:0 0 70%;scroll-snap-align:center;opacity:1;transform:none}
   .dev-art{height:150px}
 }
+@media (max-width:760px){.devices{padding-top:40px}}
